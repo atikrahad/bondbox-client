@@ -7,7 +7,7 @@ const Profileheader = ({ data }) => {
     return (
         <div className='relative'>
             <div className='pb-5 relative'>
-                <img width={1000} height={0} src={data?.groupCover} alt='cover image'></img>
+                <img className="w-full" src={data?.groupCover} alt='cover image'></img>
 
                 <div className='md:absolute  relative inline-block md:right-[45%] bottom-10 md:-bottom-16'>
                     <img width={100} height={20} className='w-40 rounded-full border-3 h-40' src={data?.groupPic} alt='profile pic'></img>

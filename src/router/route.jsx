@@ -1,8 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, useParams } from "react-router-dom";
 import Mainlayout from "../Layout/MainLayout/Mainlayout";
 import Landingpage from "../Layout/Otherslayout/Pages/Landingpage/Landingpage";
 import Groups from "../Layout/MainLayout/Pages/Groups/Groups";
 import Creategroup from "../Layout/MainLayout/Pages/Creategroup/Creategroup";
+import Profile from "../Layout/MainLayout/Pages/Profile/Profile";
+import Groupdetails from "../Layout/MainLayout/Pages/GroupDetails/Groupdetails";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -19,7 +21,17 @@ export const router = createBrowserRouter([
       {
         path: "/main/creategroup",
         element: <Creategroup></Creategroup>
-      }
+      },
+      {
+        path: "/main/profile",
+        element: <Profile></Profile>
+      },
+      {
+        path: "/main/group/:id",
+        element: <Groupdetails ></Groupdetails>,
+        loader: ({params}) => params.id
+      },
+      
     ]
   }
 ]);
