@@ -1,4 +1,4 @@
-import { createBrowserRouter, useParams } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Mainlayout from "../Layout/MainLayout/Mainlayout";
 import Landingpage from "../Layout/Otherslayout/Pages/Landingpage/Landingpage";
 import Groups from "../Layout/MainLayout/Pages/Groups/Groups";
