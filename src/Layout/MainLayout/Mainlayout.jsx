@@ -3,9 +3,11 @@ import Mainnavber from "./Shared/Mainnavber";
 
 const Mainlayout = () => {
   return (
-    <div>
+    <div className="">
       <Mainnavber></Mainnavber>
+      <div className="pt-36">
       <Outlet></Outlet>
+      </div>
     </div>
   );
 };

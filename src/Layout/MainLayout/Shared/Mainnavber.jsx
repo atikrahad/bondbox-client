@@ -29,7 +29,7 @@ const Mainnavber = () => {
 
                 </div>
                 <div className=' grid grid-cols-4 gap-5 text-5xl'>
-                    <NavLink to={"/home/groups"}>
+                    <NavLink to={"/main"}>
                         <div className='px-5 hover:bg-slate-100'><MdGroups2 className='w-[95%] mx-auto' /></div>
                     </NavLink>
                     <NavLink to={"/group"}><div className='px-5 hover:bg-slate-100'><FaWpforms className='w-[95%] mx-auto' /></div></NavLink>
