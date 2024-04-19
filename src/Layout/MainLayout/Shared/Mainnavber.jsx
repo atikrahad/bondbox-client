@@ -7,10 +7,13 @@ import { CiChat2 } from "react-icons/ci";
 import { NavLink } from 'react-router-dom';
 import Logo from "./Logo";
 import useAuth from "../../../Hooks/useAuth";
+import useProfile from "../../../Hooks/useProfile";
 
 
 const Mainnavber = () => {
     const {logout} = useAuth()
+    const userInfo = useProfile()
+    console.log(userInfo)
     return (
         <div className="fixed  z-20 bg-slate-50 shadow-lg w-full p-2 md:py-5">
             <div className='max-w-screen-xl flex-col gap-3 md:flex-row mx-auto flex md:items-center justify-between '>
@@ -21,7 +24,9 @@ const Mainnavber = () => {
                     <div className='contents w-full md:hidden'>
 
                         <div className="dropdown dropdown-end">
-                            <div tabIndex={0} role="button" className="btn m-1">Click</div>
+                            <div tabIndex={0} role="button" className=" m-1">
+                                <img className="w-12 rounded-full" src={userInfo?.profilePic} alt="" />
+                            </div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><NavLink to={"/home/profile"}><button className='btn'>Profile</button></NavLink></li>
                                 <li><button onClick={()=> logout()} className='btn'>Logout</button></li>
@@ -40,7 +45,9 @@ const Mainnavber = () => {
                 </div>
                 <div className='hidden md:contents'>
                     <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn m-1">Click</div>
+                        <div tabIndex={0} role="button" className=" m-1">
+                        <img className="w-12 rounded-full" src={userInfo?.profilePic} alt="" />
+                        </div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                             <li><NavLink to={"/main/profile"}><button className='btn'>Profile</button></NavLink></li>
                             <li><button onClick={()=> logout()}  className='btn'>Logout</button></li>
