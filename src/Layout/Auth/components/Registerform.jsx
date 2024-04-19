@@ -1,14 +1,11 @@
-
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import Axiospublic from "../../../Apis/Axiospublic";
-import { Link } from "react-router-dom";
-
-
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 
 const Registerform = () => {
-  
-
-  const handleSignup = async (e) => {
+  const { registerHandle } = useAuth();
+const navigate = useNavigate()
+  const handleSignup = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
@@ -21,15 +18,13 @@ const Registerform = () => {
       dateOfBirth,
     };
     console.log(name, email, password, dateOfBirth);
-    await createUserWithEmailAndPassword( email, password)
+    registerHandle(email, password)
       .then((res) => {
         console.log(res);
-        Axiospublic
-          .post(`http://localhost:5000/user`, user)
-          .then((res) => {
-            console.log(res.data);
-            
-          });
+        Axiospublic.post(`/user`, user).then((res) => {
+          console.log(res.data);
+          navigate("/main")
+        });
       })
       .catch((error) => console.log(error));
   };
