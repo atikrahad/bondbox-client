@@ -5,10 +5,15 @@ import Groups from "../Layout/MainLayout/Pages/Groups/Groups";
 import Creategroup from "../Layout/MainLayout/Pages/Creategroup/Creategroup";
 import Profile from "../Layout/MainLayout/Pages/Profile/Profile";
 import Groupdetails from "../Layout/MainLayout/Pages/GroupDetails/Groupdetails";
+import Login from "../Layout/Auth/Login";
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Landingpage></Landingpage>,
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
   },
   {
     path: "/main",
