@@ -12,8 +12,7 @@ const Editprofile = () => {
   const [coverImage, setCoverImage] = useState(null);
   const userInfo = useProfile();
   const {user} = useAuth()
-  console.log(profileImage);
-  console.log(coverImage);
+  
 const navigate = useNavigate()
   const imageServer = import.meta.env.VITE_imageserver;
 
