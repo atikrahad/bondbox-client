@@ -32,7 +32,7 @@ const Profileheader = ({ data }) => {
                         data?.groupName ? <button className=" btn">Join group</button> : <NavLink className='md:w-full' to={"/photos"}>Groups</NavLink>
                     }
                     {
-                        data?.groupName ? <button className="btn">Invite friends</button> : <NavLink className='md:w-[60%]' to={"/editprofile"}>Edit Profile</NavLink>
+                        data?.groupName ? <button className="btn">Invite friends</button> : <NavLink className='md:w-[60%]' to={"/main/editprofile"}>Edit Profile</NavLink>
                     }
 
                 </div>

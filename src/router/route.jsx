@@ -7,6 +7,7 @@ import Profile from "../Layout/MainLayout/Pages/Profile/Profile";
 import Groupdetails from "../Layout/MainLayout/Pages/GroupDetails/Groupdetails";
 import Login from "../Layout/Auth/Login";
 import Register from "../Layout/Auth/Register";
+import Editprofile from "../Layout/MainLayout/Pages/Profile/Editprofile";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
       {
         path: "/main/profile",
         element: <Profile></Profile>
+      },
+      {
+        path: "/main/editprofile",
+        element: <Editprofile></Editprofile>
       },
       {
         path: "/main/group/:id",
