@@ -8,6 +8,7 @@ import Groupdetails from "../Layout/MainLayout/Pages/GroupDetails/Groupdetails";
 import Login from "../Layout/Auth/Login";
 import Register from "../Layout/Auth/Register";
 import Editprofile from "../Layout/MainLayout/Pages/Profile/Editprofile";
+import Privatreroute from "./Privatreroute";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -23,27 +24,27 @@ export const router = createBrowserRouter([
   },
   {
     path: "/main",
-    element: <Mainlayout></Mainlayout>,
+    element: <Privatreroute><Mainlayout></Mainlayout></Privatreroute>,
     children:[
       {
         index: true,
-        element: <Groups></Groups>
+        element: <Privatreroute><Groups></Groups></Privatreroute>
       },
       {
         path: "/main/creategroup",
-        element: <Creategroup></Creategroup>
+        element: <Privatreroute><Creategroup></Creategroup></Privatreroute>
       },
       {
         path: "/main/profile",
-        element: <Profile></Profile>
+        element: <Privatreroute><Profile></Profile></Privatreroute>
       },
       {
         path: "/main/editprofile",
-        element: <Editprofile></Editprofile>
+        element: <Privatreroute><Editprofile></Editprofile></Privatreroute>
       },
       {
         path: "/main/group/:id",
-        element: <Groupdetails ></Groupdetails>,
+        element: <Privatreroute><Groupdetails ></Groupdetails></Privatreroute>,
         loader: ({params}) => params.id
       },
       

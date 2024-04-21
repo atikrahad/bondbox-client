@@ -87,7 +87,8 @@ const Profileheader = ({ data }) => {
             </NavLink>
           )}
 
-          <div className="dropdown w-full text-right dropdown-end">
+          {
+            data?.groupName && <div className="dropdown w-full text-right dropdown-end">
             <div tabIndex={0} role="button" className="flex justify-end m-1">
               <CiMenuKebab className="text-right"/>
             </div>
@@ -100,13 +101,16 @@ const Profileheader = ({ data }) => {
                   Invite
                 </NavLink>
               </li>
-              <li>
+              {
+                !findAdmin && <li>
                 <button  className="btn text-red-500">
                   <MdOutlineLogout/> Leave
                 </button>
               </li>
+              }
             </ul>
           </div>
+          }
         </div>
       </div>
     </div>
