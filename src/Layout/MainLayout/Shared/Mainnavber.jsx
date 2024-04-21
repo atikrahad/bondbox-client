@@ -34,7 +34,7 @@ const Mainnavber = () => {
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <NavLink to={"/home/profile"}>
+                  <NavLink to={"/main/profile"}>
                     <button className="btn">Profile</button>
                   </NavLink>
                 </li>
@@ -53,17 +53,17 @@ const Mainnavber = () => {
               <MdGroups2 className="w-[95%] mx-auto" />
             </div>
           </NavLink>
-          <NavLink to={"/group"}>
+          <NavLink to={"/main/forum"}>
             <div className="px-5 hover:bg-slate-100">
               <FaWpforms className="w-[95%] mx-auto" />
             </div>
           </NavLink>
-          <NavLink to={"/group"}>
+          <NavLink to={"/main/connect"}>
             <div className="px-5 hover:bg-slate-100">
               <FaPeopleArrows className="w-[95%] mx-auto" />
             </div>
           </NavLink>
-          <NavLink to={"/chat"}>
+          <NavLink to={"/main/chat"}>
             <div className="px-5 hover:bg-slate-100">
               <CiChat2 className="w-[95%] mx-auto" />
             </div>

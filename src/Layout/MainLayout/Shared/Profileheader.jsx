@@ -47,10 +47,10 @@ const Profileheader = ({ data }) => {
       </div>
       <div>
         <div className="sticky flex gap-5 flex-wrap md:flex-nowrap  py-5 items-center justify-evenly">
-          <NavLink className="md:w-full" to={"/timeline"}>
+          <NavLink className="md:w-full" to={"/main/profile"}>
             Time Line
           </NavLink>
-          <NavLink className="md:w-full" to={"/about"}>
+          <NavLink className="md:w-full" to={"/main/profile/about"}>
             About
           </NavLink>
           {findAdmin && (
@@ -58,7 +58,7 @@ const Profileheader = ({ data }) => {
               Edit group
             </Link>
           )}
-          <NavLink className="md:w-full md:pr-20" to={"/photos"}>
+          <NavLink className="md:w-full md:pr-20" to={"/main/profile/photos"}>
             Photos
           </NavLink>
 
@@ -67,7 +67,7 @@ const Profileheader = ({ data }) => {
               Members
             </NavLink>
           ) : (
-            <NavLink className="md:w-full md:pl-20" to={"/photos"}>
+            <NavLink className="md:w-full md:pl-20" to={"/main/profile/friends"}>
               Friends
             </NavLink>
           )}
