@@ -4,7 +4,7 @@ import useMygroups from "../../../../../Hooks/useMygroups";
 const Mygroups = () => {
   const mygroups = useMygroups();
   return (
-    <div className="min-h-10 col-span-3 grid">
+    <div className="min-h-10 md:col-span-3 w-full mx-auto grid">
       <h1 className="text-center">My Groups</h1>
       <div className="overflow-y-scroll">
         {mygroups.map((item) => (

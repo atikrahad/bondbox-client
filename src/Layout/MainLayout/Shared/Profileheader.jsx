@@ -77,7 +77,7 @@ const Profileheader = ({ data }) => {
             <button className=" btn">Join group</button>
           )}
           {data?.name && (
-            <NavLink className="md:w-full" to={"/photos"}>
+            <NavLink className="md:w-full" to={"/main/profile/groups"}>
               Groups
             </NavLink>
           )}
