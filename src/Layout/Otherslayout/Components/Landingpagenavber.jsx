@@ -20,8 +20,8 @@ const Landingpagenavber = () => {
                         <button className="nav" onClick={(event) => pageScroll(1500)}>About us</button>
                         <button className="nav" onClick={(event) => pageScroll(200)}>Contact</button>
                     </div>
-                    <Link href={"/login"}><button className="btn badge-ghost">Login</button></Link>
-                    <Link href={'/register'}><button className="btn badge-ghost">Register</button></Link>
+                    <Link to={"/login"}><button className="btn badge-ghost">Login</button></Link>
+                    
                 </div>
             </div>
 
