@@ -17,6 +17,11 @@ import About from "../Layout/MainLayout/Pages/Profile/pages/About";
 import Photos from "../Layout/MainLayout/Pages/Profile/pages/Photos";
 import Friends from "../Layout/MainLayout/Pages/Profile/pages/Friends";
 import Timeline from "../Layout/MainLayout/Pages/Profile/pages/Timeline";
+import GroupTimeline from "../Layout/MainLayout/Pages/GroupDetails/Pages/groupTimeline";
+import Groupabout from "../Layout/MainLayout/Pages/GroupDetails/Pages/Groupabout";
+import GroupPhotos from "../Layout/MainLayout/Pages/GroupDetails/Pages/GroupPhotos";
+import Members from "../Layout/MainLayout/Pages/GroupDetails/Pages/Members";
+import Invite from "../Layout/MainLayout/Pages/GroupDetails/Pages/Invite";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -91,7 +96,29 @@ export const router = createBrowserRouter([
       {
         path: "/main/group/:id",
         element: <Privatreroute><Groupdetails ></Groupdetails></Privatreroute>,
-        loader: ({params}) => params.id
+        loader: ({params}) => params.id,
+        children:[
+          {
+            index: true,
+            element: <Privatreroute><GroupTimeline></GroupTimeline></Privatreroute>
+          },
+          {
+            path: "/main/group/:id/about",
+            element: <Privatreroute><Groupabout></Groupabout></Privatreroute>
+          },
+          {
+            path: "/main/group/:id/photos",
+            element: <Privatreroute><GroupPhotos></GroupPhotos></Privatreroute>
+          },
+          {
+            path: "/main/group/:id/members",
+            element: <Privatreroute><Members></Members></Privatreroute>
+          },
+          {
+            path: "/main/group/:id/invite",
+            element: <Privatreroute><Invite></Invite></Privatreroute>
+          },
+        ]
       },
       
     ]
