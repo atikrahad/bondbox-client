@@ -14,6 +14,7 @@
     "firebase": "^10.11.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
+    "page-scroll": "^0.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.1.0",

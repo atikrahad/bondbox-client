@@ -2777,6 +2777,11 @@ p-locate@^5.0.0:
   dependencies:
     p-limit "^3.0.2"
 
+page-scroll@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/page-scroll/-/page-scroll-0.6.2.tgz#553c09c38169f209d80462aba657708aca553160"
+  integrity sha512-2KaX2VrEf7KFpSq4yUIzD2dI0OLldYfCYqT2K4J3ebpJudQCYgUMLvLnfk6O1MvjoNebeXdwmCdvnE0vOSUxAQ==
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"

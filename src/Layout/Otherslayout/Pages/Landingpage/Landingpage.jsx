@@ -1,6 +1,10 @@
+import Landingpagenavber from "../../Components/Landingpagenavber"
+
 const Landingpage = () => {
   return (
-    <div>Landingpage</div>
+    <div>
+      <Landingpagenavber></Landingpagenavber>
+    </div>
   )
 }
 
